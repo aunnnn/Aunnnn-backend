@@ -12,6 +12,12 @@ module.exports = function(app) {
     Role.destroyAll(function(err, res) {
       if (err) throw err;
       console.log('Total ' + res.count + ' role(s) are deleted.');
+
+      if (!password) {
+        console.log('Error: ADMIN_PASSWORD not provided. Please restart the app.');
+        return;
+      }
+
       User.create([
         {
           username: 'aunnnn',
