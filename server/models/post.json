@@ -6,8 +6,8 @@
     "validateUpsert": true
   },
   "properties": {
-    "date": {
-      "type": "string",
+    "created_at": {
+      "type": "date",
       "required": true
     },
     "title": {
